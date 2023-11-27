@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Programming</title>
+  </head>
+  <body>
+    <main id="app">
+      <div class="info">
+        <h1>Play with the Robot!</h1>
+        <h2>Instructions:</h2>
+        <h3 id="instructionsSwedish">The robot moves around the room by interpreting a string of commands in Swedish:</h3>
+        <ul aria-labelledby="instructionsSwedish">
+          <li>V: Turn left (vänster)</li>
+          <li>H: Turn right (höger)</li>
+          <li>G: Move forward (gå)</li>
+        </ul>
+        <h3 id="instructionsEnglish">The robot can also be configured to accept commands in English:</h3>
+        <ul aria-labelledby="instructionsEnglish">
+          <li>L: Turn left</li>
+          <li>R: Turn right</li>
+          <li>F: Move forward</li>
+        </ul>
+        <form class="form" id="instructionsForm">
+          <div class="instructions">
+            <label for="instructions">Type your instructions</label>
+            <input id="instructions" name="instructions" type="text" pattern="[VHGLRFvhglrf]*" required />
+          </div>
+          <div class="formButtons">
+            <input type="submit" value="GO!">
+            <input type="reset" value="Reset">
+          </div>
+        </form>
+        <div>
+          <h2>Current position: <span id="position"></span></h2>
+        </div>
+      </div>
+      <div id="playground" class="playground circle"></div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
