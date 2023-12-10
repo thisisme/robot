@@ -23,6 +23,13 @@
           <li>R: Turn right</li>
           <li>F: Move forward</li>
         </ul>
+        <div class="type">
+          <h3>Set type</h3>
+          <div class="buttons">
+            <button id="initSquare">Square (5x5)</button>
+            <button id="initCircle">Circle (radius 10)</button>
+          </div>
+        </div>
         <form class="form" id="instructionsForm">
           <div class="instructions">
             <label for="instructions">Type your instructions</label>
@@ -37,7 +44,9 @@
           <h2>Current position: <span id="position"></span></h2>
         </div>
       </div>
-      <div id="playground" class="playground circle"></div>
+      <div id="playground" class="playground circle">
+        <canvas id="c" width="200" height="200"></canvas>
+      </div>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>

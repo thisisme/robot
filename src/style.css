@@ -61,6 +61,11 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.type .buttons {
+  display: flex;
+
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -81,54 +86,6 @@ h1, h2, h3 {
   display: block;
   height: 100%;
   width: 100%;
-  &.circle {
-    display: flex;
-    flex-direction: column;
-    .horizontal {
-      display: flex;
-      margin: 0 auto;
-      &.reverse {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-  .square {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 1rem;
-  }
-}
-
-.box {
-  background: gray;
-  color: whitesmoke;
-  display: flex;
-  outline: #23a6d5;
-  outline-offset: -1px;
-  outline-width: 2px;
-  outline-style: solid;
-  /* padding-top: 100%; */
-  position: relative;
-  /* circle */
-  width: calc(50vh / 10);
-  height: calc(50vh / 10);
-  &.robot {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    padding-top: 0;
-    &.n img {
-      rotate: 0deg;
-    }
-    &.e img {
-      rotate: 90deg;
-    }
-    &.s img {
-      rotate: 180deg;
-    }
-    &.w img {
-      rotate: 270deg;
-    }
-  }
 }
 
 button {
